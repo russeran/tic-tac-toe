@@ -41,9 +41,7 @@ function initGame() {
 function cellClicked() {
     const cellIndex = this.getAttribute("cellIndex");
 
-    if (options[cellIndex] != "" || !running) {
-        return;
-    }
+    if (options[cellIndex] != "" || !running) { return }
 
     updateCell(this, cellIndex);
     checkWinner();
@@ -53,11 +51,13 @@ function updateCell(cell, index) {
     options[index] = currentPlayer;
     cell.textContent = currentPlayer;
 }
-
+//  whoseTurn
 function changePlayer() {
     currentPlayer = (currentPlayer == "X") ? "O" : "X";
     statusText.textContent = `${currentPlayer}'s turn`;
 }
+
+// check if cell matches with the winning combinations
 
 function checkWinner() {
     let roundWon = false;
@@ -85,6 +85,7 @@ function checkWinner() {
     }
 }
 
+// restart game function
 function restartGame() {
     currentPlayer = "X";
     options = ["", "", "", "", "", "", "", "", ""];
