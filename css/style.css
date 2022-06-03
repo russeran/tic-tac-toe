@@ -1,0 +1,45 @@
+body {
+    background-color: black;
+}
+
+.cell {
+    width: 60px;
+    height: 60px;
+    border: 2px solid white;
+    box-shadow: 0 0 0 4px;
+    line-height: 50px;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 33%;
+    background-color: green;
+    font-family: monospace;
+    margin: 10px 5px;
+}
+
+#gameContainer {
+    font-family: monospace;
+    text-align: center;
+    color: aliceblue;
+}
+
+#cellContainer {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    margin: auto;
+}
+
+#restartBtn {
+    font-size: 30px;
+    margin: auto;
+    border: 4px green solid;
+}
+
+h1 {
+    color: red;
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 30px;
+}
